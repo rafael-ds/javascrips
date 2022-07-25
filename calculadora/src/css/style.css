@@ -1,0 +1,152 @@
+* {
+
+    background-color: #312F2F;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.container{
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.menu .material-symbols-outlined {
+    font-size: 3em;
+}
+
+.dropdown{
+    position: absolute;
+    margin-top: 50px;
+}
+
+.list {
+        display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    padding: 10px;
+    margin-left: -40px;
+}
+
+.drop{
+    display: none;
+}
+
+.menu ul li {
+    padding: 5px;
+}
+
+#display {
+    height: 28vh;
+    padding: 20px;
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+
+    background-color: white;
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    padding: 15px;
+    width: 180px;
+    margin: 10px;
+
+    border-radius: 20px;
+    border: none;
+    font-weight: 800;
+
+}
+
+.btn:active {
+    transform: translateY(2px);
+    transition: .1s;
+    box-shadow: #1b1b1b 1px 5px 10px 5px;
+}
+
+.style-button {
+    background-color: #D9D9D9;
+    color: blue;
+}
+
+.zero {
+    flex: 1;
+}
+
+.result {
+    flex: 5;
+    background-color: blue;
+    color: white;
+}
+
+footer span {
+    padding: 20px;
+}
+
+footer span a {
+    color: #91B086;
+}
+
+
+@media (min-width: 577px) {
+
+    #display {
+        height: 20vh;
+    }
+
+    .buttons {
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 1em;
+        width: 100px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .result {
+        flex: none;
+        width: 36%;
+    }
+
+    .zero {
+        flex: none;
+    }
+
+    .dev {
+        padding: 10px;
+    }
+}
