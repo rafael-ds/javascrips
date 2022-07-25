@@ -18,8 +18,5 @@ operators.forEach(e => {
         let display = document.getElementById('display').innerHTML
         document.getElementById('display').innerHTML = display + valuerOperator
 
-        if (valuerOperator === '+') {
-            console.log('somar')
-        }
     })
 })
