@@ -17,49 +17,9 @@
     justify-content: space-between;
 }
 
-.header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
-
-.menu{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-}
-
-.menu .material-symbols-outlined {
-    font-size: 3em;
-}
-
-.dropdown{
-    position: absolute;
-    margin-top: 50px;
-}
-
-.list {
-        display: flex;
-    flex-direction: column;
-    list-style: none;
-
-    padding: 10px;
-    margin-left: -40px;
-}
-
-.drop{
-    display: none;
-}
-
-.menu ul li {
-    padding: 5px;
-}
-
 #display {
-    height: 28vh;
+    height: 35vh;
     padding: 20px;
-
 }
 
 .buttons {
