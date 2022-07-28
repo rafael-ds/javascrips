@@ -1,22 +1,16 @@
-const numbers = document.querySelectorAll('[Number]')
-const operators = document.querySelectorAll('[operator]')
+const btnNumbers = document.querySelectorAll('[Number]')
+const btnOperators = document.querySelectorAll('[Operator]')
+const btnResult = document.querySelector('[Result]')
 
 
-numbers.forEach(e => {
-    e.addEventListener('click', function () {
-        let valueNumber = e.value
+btnNumbers.forEach(number => number.addEventListener(
+    'click', function () {
+        console.log(number.value)
+    }
+))
 
-        let display = document.getElementById('display').innerHTML
-        document.getElementById('display').innerHTML = display + valueNumber
-    })
-})
-
-operators.forEach(e => {
-    e.addEventListener('click', function () {
-        let valuerOperator = e.value
-
-        let display = document.getElementById('display').innerHTML
-        document.getElementById('display').innerHTML = display + valuerOperator
-
-    })
-})
+btnOperators.forEach(operator => operator.addEventListener(
+    'click', function () {
+        console.log(operator.value)
+    }
+))
