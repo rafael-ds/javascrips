@@ -2,7 +2,6 @@ const btnNumbers = document.querySelectorAll('[Number]')
 const btnOperators = document.querySelectorAll('[Operator]')
 const btnResult = document.querySelector('[Result]')
 
-const display = document.getElementById('display')
 
 let temNumber
 let numberOne
@@ -10,9 +9,11 @@ let numberOne
 function clickNumber() {
     btnNumbers.forEach(eventClick => eventClick.addEventListener(
         'click', function () {
+            let display = document.getElementById('display').innerHTML
 
-            console.log(eventClick.textContent)
-            temNumber = parseInt(eventClick.textContent)
+            temNumber = eventClick.textContent          
+
+            document.getElementById('display').innerHTML = display + temNumber
 
         }
     ))
@@ -33,7 +34,6 @@ function clickOperator() {
     ))
 }
 clickOperator()
-
 
 function clickResult() {
     btnResult.addEventListener(
