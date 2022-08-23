@@ -34,6 +34,7 @@ function clickOperator() {
 }
 clickOperator()
 
+
 function clickResult() {
     btnResult.addEventListener(
         'click', function () {
