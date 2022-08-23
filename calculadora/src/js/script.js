@@ -9,11 +9,10 @@ let numberOne
 function clickNumber() {
     btnNumbers.forEach(eventClick => eventClick.addEventListener(
         'click', function () {
+            temNumber = eventClick.textContent
+            
             let display = document.getElementById('display').innerHTML
-
-            temNumber = eventClick.textContent          
-
-            document.getElementById('display').innerHTML = display + temNumber
+            temNumber = document.getElementById('display').innerHTML = display + temNumber
 
         }
     ))
@@ -23,11 +22,10 @@ clickNumber()
 function clickOperator() {
     btnOperators.forEach(eventClick => eventClick.addEventListener(
         'click', function () {
-            console.log(eventClick.textContent)
 
             if (eventClick.textContent == '+') {
                 numberOne = temNumber
-                temNumber = 0
+                document.getElementById('display').innerHTML = ''
             }
 
         }
@@ -40,7 +38,8 @@ function clickResult() {
         'click', function () {
             console.log(btnResult.textContent)
 
-            console.log(temNumber + numberOne)
+            let result =  parseInt(temNumber) + parseInt(numberOne)
+            document.getElementById('display').innerHTML = result
         }
     )
 }
