@@ -25,13 +25,11 @@ function clickOperator() {
         'click', function () {
 
             if (eventClick.textContent == '+') {
-                numberOne = temNumber
-                temNumber = 0
-                console.log(`Click NumberOne ${numberOne}`)
-                console.log(`Click Number 2 = ${temNumber}`)
-
-                
                 let display = document.getElementById('display').innerHTML
+
+                numberOne = display
+                temNumber = 0
+                
                 document.getElementById('display').innerHTML = display + ' + '
                 
             }
@@ -46,8 +44,6 @@ function clickOperator() {
         btnResult.addEventListener(
             'click', function () {
                 console.log(btnResult.textContent)
-                
-                console.log(`Click Number 3 = ${temNumber}`)
             
                 let result =  parseInt(numberOne) + parseInt(temNumber)
                 document.getElementById('display').innerHTML = result
