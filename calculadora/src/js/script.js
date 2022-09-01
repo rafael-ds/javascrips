@@ -3,53 +3,95 @@ const btnOperators = document.querySelectorAll('[Operator]')
 const btnResult = document.querySelector('[Result]')
 
 
-let temNumber = 0
+let tempNumber = 0
 let numberOne
 
 function clickNumber() {
+
     btnNumbers.forEach(eventClick => eventClick.addEventListener(
+
         'click', function () {
-            temNumber = eventClick.textContent
-            console.log(`Click Number ${temNumber}`)
+            tempNumber = eventClick.textContent
 
             let display = document.getElementById('display').innerHTML
-    
-            document.getElementById('display').innerHTML = display + temNumber
+            document.getElementById('display').innerHTML = display + tempNumber
         }
+
     ))
 }
 clickNumber()
 
 function clickOperator() {
     btnOperators.forEach(eventClick => eventClick.addEventListener(
+
         'click', function () {
 
-            if (eventClick.textContent == '+') {
-                let display = document.getElementById('display').innerHTML
+            switch (eventClick.textContent) {
 
-                numberOne = display
-                temNumber = 0
-                
-                document.getElementById('display').innerHTML = display + ' + '
-                
+                case '+':
+                    let sum = document.getElementById('display').innerHTML
+
+                    numberOne = display
+                    tempNumber = 0
+
+                    document.getElementById('display').innerHTML = sum + ' + '
+                    break
+
+                case '-':
+                    let subtraction = document.getElementById('display').innerHTML
+
+                    numberOne = display
+                    tempNumber = 0
+
+                    document.getElementById('display').innerHTML = subtraction + ' - '
+                    break
+
+                case 'x':
+                    let multiplication = document.getElementById('display').innerHTML
+
+                    numberOne = display
+                    tempNumber = 0
+
+                    document.getElementById('display').innerHTML = multiplication + ' x '
+                    break
+
+                case '/':
+                    let division = document.getElementById('display').innerHTML
+
+                    numberOne = display
+                    tempNumber = 0
+
+                    document.getElementById('display').innerHTML = division + ' / '
+                    break
+
+                case '%':
+                    let rest = document.getElementById('display').innerHTML
+
+                    numberOne = display
+                    tempNumber = 0
+
+                    document.getElementById('display').innerHTML = rest + ' % '
+                    break
+
+
             }
-            
+
         }
-        ))
-    }
-    clickOperator()
+    ))
+}
+clickOperator()
 
-    
-    function clickResult() {
-        btnResult.addEventListener(
-            'click', function () {
-                console.log(btnResult.textContent)
-            
-                let result =  parseInt(numberOne) + parseInt(temNumber)
-                document.getElementById('display').innerHTML = result
 
-                console.log(result)
-            }
+function clickResult() {
+    btnResult.addEventListener(
+        'click', function () {
+            console.log(btnResult.textContent)
+
+            let result = parseInt(numberOne) + parseInt(tempNumber)
+            document.getElementById('display').innerHTML = result
+
+            console.log(result)
+        }
     )
 }
 clickResult()
