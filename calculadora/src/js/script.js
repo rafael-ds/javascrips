@@ -5,6 +5,7 @@ const btnResult = document.querySelector('[Result]')
 
 let tempNumber = 0
 let numberOne
+let operator
 
 function clickNumber() {
 
@@ -31,8 +32,9 @@ function clickOperator() {
                 case '+':
                     let sum = document.getElementById('display').innerHTML
 
-                    numberOne = display
+                    numberOne = sum
                     tempNumber = 0
+                    operator = eventClick.textContent
 
                     document.getElementById('display').innerHTML = sum + ' + '
                     break
@@ -40,8 +42,9 @@ function clickOperator() {
                 case '-':
                     let subtraction = document.getElementById('display').innerHTML
 
-                    numberOne = display
+                    numberOne = subtraction
                     tempNumber = 0
+                    operator = eventClick.textContent
 
                     document.getElementById('display').innerHTML = subtraction + ' - '
                     break
@@ -49,8 +52,9 @@ function clickOperator() {
                 case 'x':
                     let multiplication = document.getElementById('display').innerHTML
 
-                    numberOne = display
+                    numberOne = multiplication
                     tempNumber = 0
+                    operator = eventClick.textContent
 
                     document.getElementById('display').innerHTML = multiplication + ' x '
                     break
@@ -58,8 +62,9 @@ function clickOperator() {
                 case '/':
                     let division = document.getElementById('display').innerHTML
 
-                    numberOne = display
+                    numberOne = division
                     tempNumber = 0
+                    operator = eventClick.textContent
 
                     document.getElementById('display').innerHTML = division + ' / '
                     break
@@ -67,12 +72,16 @@ function clickOperator() {
                 case '%':
                     let rest = document.getElementById('display').innerHTML
 
-                    numberOne = display
+                    numberOne = rest
                     tempNumber = 0
+                    operator = eventClick.textContent
 
                     document.getElementById('display').innerHTML = rest + ' % '
                     break
 
+                case 'c':
+                    document.getElementById('display').innerHTML = ''
+                    break
 
             }
 
@@ -81,16 +90,39 @@ function clickOperator() {
 }
 clickOperator()
 
-
 function clickResult() {
     btnResult.addEventListener(
         'click', function () {
-            console.log(btnResult.textContent)
 
-            let result = parseInt(numberOne) + parseInt(tempNumber)
-            document.getElementById('display').innerHTML = result
+            switch (operator) {
+                case '+':
+                    let sumResult = parseInt(numberOne) + parseInt(tempNumber)
+                    document.getElementById('display').innerHTML = sumResult
+                    break
 
-            console.log(result)
+                case '-':
+                    let subtractionResult = parseInt(numberOne) - parseInt(tempNumber)
+                    document.getElementById('display').innerHTML = subtractionResult
+                    break
+
+                case 'x':
+                    let multiplicationResult = parseInt(numberOne) * parseInt(tempNumber)
+                    document.getElementById('display').innerHTML = multiplicationResult
+                    break
+
+                case '/':
+                    let divisionResult = parseInt(numberOne) / parseInt(tempNumber)
+                    document.getElementById('display').innerHTML = divisionResult
+                    break
+
+                case '%':
+                    document.getElementById('display').innerHTML = restResult
+                    console.log(restResult)
+                    break
+
+            }
+
+
         }
     )
 }
