@@ -1,3 +1,5 @@
+
+/* Header */
 .banner{
     background-image: url(../image/fundo.png);
     background-repeat: no-repeat;
@@ -32,4 +34,40 @@
 
 .logo img{
     width: 180px;    
+}
+
+/* Inputs */
+.section_inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.input_email, .input_password{
+    display:  flex;
+    flex-direction: column;
+
+    padding: 5px;
+    width: 80%;
+
+
+}
+
+.input_email label, .input_password label{
+    padding: 5px;
+    font-size: .8em;
+    margin-left: 2%;
+}
+
+.input_email input, .input_password input{
+    border: 1px solid rgb(179, 178, 178);
+    border-radius: 50px;
+    height: 30px;
+}
+
+input::placeholder{
+    padding: 20px;
 }
