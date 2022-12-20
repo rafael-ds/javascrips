@@ -2,8 +2,7 @@ const btnNumbers = document.querySelectorAll('[Number]')
 const btnOperators = document.querySelectorAll('[Operator]')
 const btnResult = document.querySelector('[Result]')
 
-
-let tempNumber = 0
+let tempNumber
 let numberOne
 let operator
 
@@ -97,7 +96,7 @@ function clickResult() {
             switch (operator) {
                 case '+':
                     let sumResult = parseInt(numberOne) + parseInt(tempNumber)
-                    document.getElementById('display').innerHTML = sumResult
+                    document.getElementById('display').innerHTML = sumResult                    
                     break
 
                 case '-':
