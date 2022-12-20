@@ -1,0 +1,35 @@
+.banner{
+    background-image: url(../image/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    min-height: 250px;
+    width: 100%;    
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 0;
+    margin-bottom: 50px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+
+    margin-top: -80px;
+    
+}
+
+.logo img{
+    width: 180px;    
+}
