@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center;
 
-    min-height: 250px;
+    min-height: 300px;
     width: 100%;    
 }
 
@@ -51,6 +51,7 @@
     flex-direction: column;
 
     padding: 5px;
+    margin-bottom: 20px;
     width: 80%;
 
 
@@ -70,4 +71,89 @@
 
 input::placeholder{
     padding: 20px;
+}
+
+/* BTN */
+.btn_login{
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 1em;
+
+    border-radius: 8px;
+    border: none;
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+/* OR */
+.section_or{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.or{
+    color: gray;
+    margin-top: -5px;
+}
+
+.barra{
+    border: solid rgb(218, 218, 218) 1px;
+    width: 200px;
+    margin: 20px;
+    align-self: center;
+}
+
+.face_google{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.google, .facebook{
+    border: solid 1px gray;
+    border-radius: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.face_google img{
+    width: 30px;
+    padding: 5px;
+    margin-left: 5%;
+}
+
+.face_google span{
+    text-align: center;
+    width: 100%;
+    font-size: larger;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 20px;
+}
+.dev{
+    margin-top: 20px;
+    font-size: larger;
+}
+.dev span a{
+    text-decoration: none;
+    color: #E29E37;
 }
